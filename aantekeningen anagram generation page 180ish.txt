@@ -1,0 +1,67 @@
+agrms("abcd")
+collection
+
+sub = agrms("bcd")
+
+agrms("bcd") = ["bcd", "cbd", "cdb", "bdc", "dbc", "dcb"]
+collection
+sub = agrms("cd") = ["cd", "dc"]
+for each sub anagram
+step 1: "cd"
+	for index in range (0, len("cd") + 1):
+		copy = "cd"
+		insert b at index 0
+		copy = "bcd"
+		add to collection		
+		
+		copy = "cd"
+		insert b at index 1
+		copy = "cbd"
+		add to collection
+
+		copy = "cd"
+		insert b at index 2
+		copy = "cdb"
+		add to collection
+
+step 2: "dc"
+	for index in range (0, len("dc") + 1):
+		copy = "dc"
+		insert b at index 0
+		copy = "bdc"
+		add to collection
+		
+		copy = "dc"
+		insert b at index 1
+		copy = "dbc"
+		add to collection
+
+		copy = "dc"
+		insert b at index 2
+		copy = "dcb"
+		add to collection
+
+return ["bcd", "cbd", "cdb", "bdc", "dbc", "dcb"]
+		
+
+
+
+
+
+
+agrms("cd") = ["cd", "dc"]
+collection
+sub = agrms("d") = "d"
+
+for anagram in sub:
+	for letter in anagram:
+		copy = "d"
+
+collection = ["cd", "dc"]	
+	
+		
+
+
+-------------
+agrms("d")
+return "d"	

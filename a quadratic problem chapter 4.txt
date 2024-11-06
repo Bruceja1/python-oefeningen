@@ -1,0 +1,54 @@
+if there are N data elements, how
+many steps will the algorithm take? 
+
+[1, 5, 3, 9, 1, 4] = 6 data elements
+
+5^N (N-1)^N
+
+[1, 5, 3] = 3 data elements
+2
+2
+2
+= 6 steps 
+
+[1, 5, 3, 9] = 4 data elements
+3
+3
+3
+3
+= 12 steps
+
+[1, 5, 3, 9, 1] = 5 data elements
+5
+5
+5
+5
+5
+= 25 steps
+
+[1, 5, 3, 9, 1, 4] = 6 data elements
+6
+6
+6
+6
+6
+6
+= 36 steps
+
+[1, 5, 3, 9, 1, 4, 7] = 7 data elements
+7
+7
+7
+7
+7
+7
+7
+= 49 steps
+
+3 elements: 9 steps
+4 elements: 16 steps + 7
+5 elements: 25 steps + 9
+6 elements: 36 steps + 11
+7 elements: 49 steps + 13
+
+
