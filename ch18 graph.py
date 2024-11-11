@@ -6,6 +6,22 @@ class Vertex:
     def add_adjacent_vertex(self, vertex):
         self.adjacent_vertices.append(vertex)
 
+class Queue:
+    def __init__(self):
+        self.data = []
+
+    def enqueue(self, element):
+        self.data.append(element)
+
+    def dequeue(self):
+        return self.data.pop(0)
+
+    def read(self):
+        if len(self.data) == 0:
+            return None
+        
+        return self.data[0]
+        
 def dfs_traverse(vertex, visited_vertices={}):
     visited_vertices[vertex.value] = True
     print(vertex.value)
@@ -15,6 +31,23 @@ def dfs_traverse(vertex, visited_vertices={}):
         #print(f"The adjacent vertex of {vertex.value} is: {adjacent_vertex.value}")
         if adjacent_vertex.value not in visited_vertices:          
             dfs_traverse(adjacent_vertex, visited_vertices)
+
+def bfs_traverse(starting_vertex):
+    queue = Queue()
+
+    visited_vertices = {}
+    visited_vertices[starting_vertex.value] = True
+    queue.enqueue(starting_vertex)
+
+    while queue.read():
+        current_vertex = queue.dequeue()
+        print(current_vertex.value)
+
+        for adjacent_vertex in current_vertex.adjacent_vertices:
+            if adjacent_vertex.value not in visited_vertices:
+                visited_vertices[adjacent_vertex.value] = True
+                queue.enqueue(adjacent_vertex)
+        
 
 alice = Vertex("alice")
 bob = Vertex("bob")
@@ -55,10 +88,5 @@ gina.add_adjacent_vertex(irena)
 
 irena.add_adjacent_vertex(gina)
 
-for friend in alice.adjacent_vertices:
-    print("1")
 
-for friend in candy.adjacent_vertices:
-    print("2")
-
-dfs_traverse(alice)
+bfs_traverse(alice)
