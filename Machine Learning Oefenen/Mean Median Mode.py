@@ -15,7 +15,3 @@ speed = [99,86,87,88,86,103,87,94,78,77,85,86]
 x_mode = stats.mode(speed)
 print(x_mode)
 
-# Standard deviation. Small number = values are close to average.
-speed = [86,87,88,86,87,85,86]
-x_std = numpy.std(speed)
-print(x_std)
