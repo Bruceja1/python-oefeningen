@@ -28,6 +28,13 @@ def dijkstra_shortest_path(starting_city, final_destination):
 
             price_through_current_city = cheapest_prices_table[current_city.name] + price
 
+            if adjacent_city.name not in cheapest_prices_table or price_through_current_city < cheapest_prices_table[adjacent_city.name]:
+                cheapest_prices_table[adjacent_city.name] = price_through_current_city
+                cheapest_previous_stopover_city_table[adjacent_city.name] = current_city.name
+            
+
+
+
 atlanta = City("Atlanta")
 boston = City("Boston")
 chicago = City("Chicago")
