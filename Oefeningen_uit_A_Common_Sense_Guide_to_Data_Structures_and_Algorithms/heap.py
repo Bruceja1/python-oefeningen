@@ -27,12 +27,6 @@ class Heap:
             new_node_index = self.parent_index(new_node_index)
 
     def has_greater_child(self, index):
-        #left_index = self.left_child_index(index)
-        #right_index = self.right_child_index(index)
-        #if left_index > len(self.data) or right_index > len(self.data):
-            #return False
-
-        #print(f"Index: {index}, Left Child Index: {left_index}, Right Child Index: {right_index}, Data Length: {len(self.data)}")
         return (self.data[self.left_child_index(index)] < len(self.data) and self.data[self.left_child_index(index)] > self.data[index]) or (self.data[self.right_child_index(index)] < len(self.data) and self.data[self.right_child_index(index)] > self.data[index])
 
     def calculate_larger_child_index(self, index):
@@ -57,8 +51,6 @@ class Heap:
             print(self.data)
             trickle_node_index = larger_child_index
     
-    
-
 myHeap = Heap()
 for i in range(0, 10):
     myHeap.insert(i)
