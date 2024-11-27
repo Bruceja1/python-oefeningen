@@ -1,3 +1,5 @@
+# Eigen oplossing
+
 def reverse(array):
     left_index = 0
     right_index = len(array) - 1
