@@ -18,7 +18,8 @@ def sum_swap(array1, array2):
 # De 'target' som van beide arrays ligt in het midden tussen de twee sommen.
 # Oftewel het gemiddelde tussen de twee.
 # loop over de eerste array
-# 
+# ...
+# Concept (niet af)
 def sum_swap2(array1, array2):
     sum_of_array1 = sum(array1)
     sum_of_array2 = sum(array2)
@@ -53,6 +54,7 @@ def sum_swap2(array1, array2):
 
     return indices
 
+# Oplossing boek O(N + M)
 def sum_swap3(array_1, array_2):
     hash_table = {}
     sum_1 = 0
