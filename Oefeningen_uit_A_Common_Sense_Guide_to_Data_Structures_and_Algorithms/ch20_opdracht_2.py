@@ -1,3 +1,5 @@
+# Eigen oplossing
+
 def find_missing_integer(array):
     integer_dict = {}
     highest_number = -999999
