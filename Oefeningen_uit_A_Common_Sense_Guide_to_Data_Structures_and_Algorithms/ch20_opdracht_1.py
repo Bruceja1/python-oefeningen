@@ -29,7 +29,7 @@ def multiple_sports(array1, array2):
 
     for player in array2:
         if player["first_name"] in name_collection:
-            name_collection[player["first_name"]] += 1
+            #name_collection[player["first_name"]] += 1
             duplicate_names.append(player["first_name"] + " " + player["last_name"])
 
     print(duplicate_names)
