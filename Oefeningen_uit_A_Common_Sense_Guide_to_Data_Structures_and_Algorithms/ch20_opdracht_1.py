@@ -1,3 +1,5 @@
+# Eigen oplossing
+
 basketball_players = [
     {"first_name": "Jill", "last_name": "Huang", "team": "Gators"},
     {"first_name": "Janko", "last_name": "Barton", "team": "Sharks"},
@@ -20,14 +22,16 @@ def multiple_sports(array1, array2):
     # list.append firstname+lastname
     # return list
 
+    duplicate_names = []
     name_collection = {}
-    for player in basketball_players:
+    for player in array1:
         name_collection[player["first_name"]] = 1
 
-    print(name_collection)
+    for player in array2:
+        if player["first_name"] in name_collection:
+            name_collection[player["first_name"]] += 1
+            duplicate_names.append(player["first_name"] + " " + player["last_name"])
 
+    print(duplicate_names)
 
-
-print(basketball_players[0]["first_name"])
-print(football_players[0]["first_name"])
 multiple_sports(basketball_players, football_players)
