@@ -1,3 +1,5 @@
+# Oplossing boek
+
 def find_greatest_profit(array):
     buy_price = array[0]
     greatest_profit = 0
